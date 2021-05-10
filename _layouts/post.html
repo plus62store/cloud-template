@@ -257,6 +257,7 @@ ion-item.item-native {
     margin-right: -999999999px!important;
     display: none!important;
 }
+.mdl-button {background:white;color:currentColor;width:100%;margin-top:5px;border: 1px solid;}
 </style>
 
 <article class="produk-page simpleCart_shelfItem"  id='buyWhatsApp'>
@@ -282,7 +283,7 @@ ion-item.item-native {
 <div class='data-form validate-form' id='whatsapp'>
 <input class='tujuan' id='noAdmin' type='hidden'/>
 <label class='formWhatsApp' style="width: -webkit-fill-available;">
-<select class='mdl-button item_color warna wajib' placeholder='Warna' style="background:white;color:currentColor;width:100%;margin-top:5px;border: 1px solid;">
+<select class='mdl-button item_color warna wajib' placeholder='Warna'>
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Warna</option>
 <optgroup label='Pilih Warna'>
             {% for warna in page.warna %}
@@ -292,7 +293,7 @@ ion-item.item-native {
 </select>
 </label>
 <label class='formWhatsApp' style="width: -webkit-fill-available;">
-<select class='mdl-button item_tali tali wajib' placeholder='Model' style="background:white;color:currentColor;width:100%;margin-top:5px;border: 1px solid;">
+<select class='mdl-button item_tali tali wajib' placeholder='Model'>
 <option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Model</option>
 <optgroup label='Pilih Model Tali'>
             {% for tali in page.model %}
@@ -315,49 +316,55 @@ ion-item.item-native {
     </button>
   </div>
 </div></div>
-    </ion-card-content>
-</ion-card>
-<div class="tombol">
-    <label class="modal-open tombol-beli modal-label" for="modal-open3"><b>Beli Langsung</b></label>
-    <label class="item_add cart-open tombol-beli modal-label"><b>Add To Cart</b></label></div>
-    <input type="radio" name="modal" value="open" id="modal-open3" class="modal-radio" />
-    <div class="modal modal3">
-      <label class="modal-label overlay"><input type="radio" name="modal" value="close" class="modal-radio"/></label>
-      <div class="content">
-        <div class="top">
-<ion-card-header>
-<ion-label><center>Order {{ page.title }} @IDR {{ page.diskon }}</center></ion-label>
-</ion-card-header>
-          <label class="modal-label close-btn"><input type="radio" name="modal" value="close" class="modal-radio"/></label>
-        </div>
 <div class="disclaim">
 <small><b style="color:crimson;">Disclaimer:</b> Persamaan warna foto katalog dengan produk asli mencapai 98%. Efek cahaya, kecerahan, kerapatan, dan resolusi layar memungkinkan terjadinya distorsi warna.</small>
 </div>
-        <ion-item>
-          <ion-label position="fixed">*Nama</ion-label>
-          <ion-input class='nama wajib' placeholder="Nama Anda"></ion-input>
-        </ion-item><ion-item>
-          <ion-label position="fixed">*WhatsApp</ion-label>
-          <ion-input class='nomor wajib' placeholder="No.WhatsApp" type="number"></ion-input>
-        </ion-item>
-<ion-item>
-          <ion-label position="stacked">*Alamat Lengkap</ion-label>
-          <ion-textarea class='alamat wajib' placeholder="Alamat Lengkap"></ion-textarea>
-        </ion-item>
-		<ion-item>
-          <ion-label>*Pilih Kurir</ion-label>
-          <ion-select class='informasi wajib' placeholder='Kurir' value="Tidak Dipilih" interface="action-sheet">
-            <ion-select-option value="J%26T Express">J&T Express</ion-select-option>
-            <ion-select-option value="JNE Express">JNE Express</ion-select-option>
-            <ion-select-option value="*GoSend">*GoSend</ion-select-option>
-            <ion-select-option value="*GrabExpress">*GrabExpress</ion-select-option>
-          </ion-select>
-        </ion-item>
-<center style="margin-top: 20px;">
-<ion-button fill="clear" class='sendWAclik kirim' slot="end" size="normal" onclick='redirect(&apos;/terimakasih.html&apos;)'>Order Sekarang</ion-button>
-</center>
+<div class="tombol">
+    <ion-beli class="modal-open tombol-beli modal-label  show-modal"><b>Beli Langsung</b></ion-beli>
+    <ion-click class="item_add cart-open tombol-beli modal-label"><b>Add To Cart</b></ion-click></div>
+    </ion-card-content>
+</ion-card>
+  <dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+<span class="info"><i class="fa fa-info" style="font-size:8px;"></i> Lengkapi Data Berikut</span>
+<!--=== HTML Table Form Pesanan ===-->
+<div class='gridWhatsApp'>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+<!--=== From Nama ===-->
+<input class='nama wajib mdl-textfield__input' placeholder='Nama Lengkap' type='text'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='alamat wajib mdl-textfield__input mdl-textfield--floating-label' placeholder='Alamat Lengkap' type='text'></textarea>
+</label>
+<label class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'>
+<!--=== From Nomor WhatsApp ===-->
+<input type='number' class='nomor wajib mdl-textfield__input' placeholder='No. WhatsApp'onkeypress='return hanyaAngka(event)'/>
+</label>
+<label class='item'>
+<!--=== From Alamat ===-->
+<textarea class='note mdl-textfield__input mdl-textfield--floating-label' placeholder='Catatan' type='text'></textarea>
+</label>
+<div class="wrn" style="margin-top:10px;">Pengiriman:</div>
+<label class='formWhatsApp'>
+<select class='mdl-button informasi wajib' placeholder='Informasi' style="border:1px solid;background:white;color:currentColor;width:100%;">
+<option hidden='hidden' selected='selected' value='Tidak Dipilih'>Pilih Kurir</option>
+<optgroup label='Kirim Pakai?'>
+<option value='J%26T Express'>J&T Express</option>
+<option value='JNE Express'>JNE Express</option>
+<option value='*Go Send'>*Go Send (Kota Tasik)</option>
+<option value='*GrabExpress'>*GrabExpress (Kota Tasik)</option>
+</optgroup>
+</select>
+</label>
 </div>
-</div>
+    <div class="mdl-dialog__actions mdl-dialog__actions" style="justify-content:space-between!important;;padding: 8px 0!important;margin-top: 10px;display: flex;flex-wrap: nowrap;">
+      <a type="button" onclick="history.back();" class="whatsapp-btn mdl-button sendWAclik kirim">Lanjut</a>
+      <button type="button" class="mdl-button close">Tutup</button>
+    </div>
+    </div>
+	</div>
+  </dialog>
 </div>
 </div>
 </article>

@@ -6,7 +6,8 @@ title: Masker Bordir Tulip
 harga: '20.000'
 persen: 25% off
 diskon: '15.000'
-stok: 20pcs
+sku: bordir-tulip
+mpn: p62s_6520
 subtitle: Masker Bordir Tulip
 desk: masker bordir manual tasikmalaya, dengan 3 lapis kain, tersedia headloop dan earloop.
 image: https://1.bp.blogspot.com/-8-PZdkzPW3E/YFxgVZTjvGI/AAAAAAAAHJc/lQJk1oau84Is0udB_ZEZwKHWt5NCGZ8qgCLcBGAsYHQ/s320/utama.jpg

@@ -6,7 +6,8 @@ title: Masker Bordir Rosse
 harga: '20.000'
 persen: 25% off
 diskon: '15.000'
-stok: 13pcs
+sku: bordir-rosse
+mpn: p62s_5120
 subtitle: Masker Bordir Rosse
 desk: masker bordir manual tasikmalaya, dengan 3 lapis kain, tersedia headloop dan earloop.
 image: https://1.bp.blogspot.com/--vODME6sY-8/YFxZLwUr62I/AAAAAAAAHIY/4nMq1sG_cK8n_sT8jrHpKZlcfVXJ-4NKwCLcBGAsYHQ/s320/utama.jpg

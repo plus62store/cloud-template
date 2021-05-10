@@ -6,7 +6,8 @@ title: Masker Bordir Mawar
 harga: '20.000'
 persen: 25% off
 diskon: '15.000'
-stok: 20pcs
+sku: bordir-mawar
+mpn: p62s_5220
 subtitle: Masker Bordir Mawar
 desk: masker bordir manual tasikmalaya, dengan 3 lapis kain, tersedia headloop dan earloop.
 image: https://1.bp.blogspot.com/-Egz6vffdnxM/YFxWc5lzUDI/AAAAAAAAHGs/yT2SywMN_5IBnuFniLIVZWLXZ1wAoQIpACLcBGAsYHQ/s320/utama.jpg

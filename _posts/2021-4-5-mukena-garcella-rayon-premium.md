@@ -6,7 +6,8 @@ title: Mukena Garcella
 harga: '185.000'
 persen: 15% off
 diskon: '157.250'
-stok: 20pcs
+sku: garcella
+mpn: p62s_4520
 subtitle: Mukena Garcella Rayon Premium
 desk: mukena rayon premium GARCELLA, Stok terbatas.
 image: https://cf.shopee.co.id/file/09a49f974223ab7ee852275e9c0193e0

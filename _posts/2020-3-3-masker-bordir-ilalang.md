@@ -6,7 +6,8 @@ title: Masker Bordir Ilalang
 harga: '20.000'
 persen: 25% off
 diskon: '15.000'
-stok: 20pcs
+sku: bordir-ilalang
+mpn: p62s_3320
 subtitle: masker bordir ilalang
 desk: masker bordir manual tasikmalaya, dengan 3 lapis kain, tersedia headloop dan earloop.
 image: https://1.bp.blogspot.com/-nYwa2H3pu60/YFxVBXzlN2I/AAAAAAAAHF4/o-ihKHtwVL0ngaLGHTgKQ8S0uZOEaIFrgCLcBGAsYHQ/s320/ilalang-utama.jpg

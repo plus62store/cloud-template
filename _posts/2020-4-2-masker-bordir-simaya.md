@@ -6,7 +6,8 @@ title: Masker Bordir Simaya
 harga: '20.000'
 persen: 25% off
 diskon: '15.000'
-stok: 20pcs
+sku: bordir-simaya
+mpn: p62s_4220
 subtitle: Masker Bordir Simaya
 desk: masker bordir manual tasikmalaya, dengan 3 lapis kain, tersedia headloop dan earloop.
 image: https://1.bp.blogspot.com/-hjHhDHKyWW0/YFxX1TUF5OI/AAAAAAAAHHc/-u1BtbsgT0Qkkp1xDrs3xEgBo24-Qe-sgCLcBGAsYHQ/s320/utama.jpg
