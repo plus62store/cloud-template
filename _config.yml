@@ -37,13 +37,14 @@ footer-links:
 # You can find your shortname on the Settings page of your Disqus account
 disqus: 
 comen: 30234
-fb-pixel: 
-fb-appID: 
-fb-admin: 
-fb-profile: 
-fb-pages: 
-signal-id: 
-google_analytics: 
+fb-pixel: 300545907860274
+fb-appID: 437300347340287
+fb-admin: 158878762428839
+fb-profile: 435671100899312
+fb-pages: 107881477662203
+signal-id: ec75b8ee-8401-422f-ab4b-305d44cc7d8a
+safari-web-ID: web.onesignal.auto.2fc72fe0-a0df-475b-ad9a-b2dac840a493
+google_analytics: G-FS7GYYZBJQ
 dana-pay: https://link.dana.id/p2m?params=[orderId=c8c9ea7c-8b86-421d-987d-ebcf2d5604bf]
 dana-diskon: https://link.dana.id/p2m?params=[orderId=534a046a-07ee-46c9-a7cd-0a54552e212a]
 

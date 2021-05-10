@@ -158,10 +158,10 @@ setInterval(function(){
   "offers": [
     {
       "@type": "Offer",
-      "price": "{{ page.diskon }}",
       "priceCurrency": "IDR",
-      "itemCondition": "https://schema.org/NewCondition",
+      "price": "{{ page.diskon }}",
       "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
       "url":"{{ site.url }}{{ page.url }}",
       "priceValidUntil": "2022-01-01T00:00:00.000Z"
     }
@@ -169,7 +169,8 @@ setInterval(function(){
   "additionalProperty": [{
     "@type": "PropertyValue",
     "propertyID": "item_group_id",
-    "value": "masker_bordir"
+    "value": "masker_bordir",
+    "category": "1604",
   }]
 }
 </script>
