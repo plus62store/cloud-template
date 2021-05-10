@@ -1,0 +1,83 @@
+
+{% if page.layout == "default" %}
+      <ion-card class="aside-category">
+    {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+            <ion-card-header>
+<ion-title>{{ category_name }}</ion-title>
+            </ion-card-header>
+        <a name="{{ category_name | slugize }}"></a>
+        {% for post in site.categories[category_name] %}
+            <ion-list>
+<a href="{{ site.baseurl }}{{ post.url }}">
+              <ion-item>
+                <ion-avatar slot="start">
+                  <ion-img src="{{post.image}}"/>
+                </ion-avatar>
+                <ion-label>
+                    <h2>{{post.title}}</h2>
+                    <h3>IDR.{{post.harga}}</h3>
+                    <small><ion-icon style="color:#ffb200;" name="star"></ion-icon> {{post.rate}} / 5</small>
+                </ion-label>
+                </ion-avatar>
+              </ion-item></a>
+            </ion-list>
+        {% endfor %}
+    {% endfor %}
+    </ion-card>
+{% endif %}
+
+{% if page.layout == "default" %}
+      <div class="aside">
+<ion-card class="siside">
+            <ion-card-header>
+<ion-title>Blog Post
+<a href="/blog-post"><ion-chip class="chip_ion">Lainnya ></ion-chip></a></ion-title>
+            </ion-card-header>
+<div class="siside">
+  {% for artikel in site.data.artikel %}
+    <article class="blog-post">
+<a href="{{artikel.url}}">
+        <ion-card class="posting" style="background: url('{{artikel.img}}');background-position:center;background-size:cover;background-blend-mode:overlay;background-color:#222222b8;color:white;">
+            <ion-card-header>
+              <ion-card-subtitle color="light">{{artikel.judul}}</ion-card-subtitle>
+              <ion-card-label style="color:red">{{ artikel.time }}</ion-card-label>
+            </ion-card-header>
+            <ion-card-content color="light">
+              {{artikel.deskrip}}
+            </ion-card-content>
+        </ion-card>
+</a>
+    </article>
+  {% endfor %}
+</div>
+      </ion-card>
+</div>
+{% endif %}
+
+{% if page.layout == "post" %}
+      <div class="aside">
+      <ion-card style="background: url('{{artikel.image}}');background-position:center;background-size:cover;background-blend-mode:overlay;background-color:rgb(0 0 0 / 10%);">
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+    {% include review.html %}
+        </ion-card-content>
+      </ion-card>
+      </div>
+{% endif %}
+
+{% if page.layout == "blogPage" %}
+      <div class="aside">
+      <ion-card style="background: url('');background-position:center;background-size:cover;background-blend-mode:overlay;background-color:#222222b8;color:white;">
+        <ion-card-header>
+          <ion-card-subtitle color="light">Post by: {{page.author}}</ion-card-subtitle>
+          <ion-card-title color="light">{{page.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{page.deskrip}}
+        </ion-card-content>
+      </ion-card>
+      </div>
+{% endif %}

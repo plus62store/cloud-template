@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "brand": "As-Syariah Bordir",
+  "description": "Jasa & Produk Bordir Tasikmalaya",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "bestRating": "5",
+    "ratingCount": "{{ page.rC }}",
+    "ratingValue": "{{ page.rate }}"
+  },
+  "image": "{{ page.image }}",
+  "name": "{{ page.subtitle }}",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "IDR",
+    "highPrice": "{{ page.harga }}",
+    "lowPrice": "{{ page.diskon }}",
+    "offerCount": "{{ page.stok }}",
+    "offers": [
+      {
+        "@type": "Offer",
+        "url": "{{ site.url }}{{ page.url }}"
+      },
+      {
+        "@type": "Offer",
+        "url": "{{ site.url }}{{ page.url }}"
+      }
+    ]
+  }
+}
+</script>
+<div class="category-page">
+  <div id="archives">
+    {% for category in site.categories %}
+      <div class="archive-group"></div>
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <div id="#{{ category_name | slugize }}"></div>
+        <p></p>
+        <h3 class="category-head" style="border: 1px solid;width: fit-content;padding: 5px 10px;border-radius: 25px;margin: 10px;">{{ category_name }}</h3>
+<div class="post-categories">
+<div class="posts" style="width: 100%!important;">
+        <a name="{{ category_name | slugize }}"></a>
+        {% for post in site.categories[category_name] %}
+    <article class="post">
+<a href="{{ site.baseurl }}{{ post.url }}">
+<ion-card>
+<small class="emblem">{{ post.persen }}</small>
+        <img src="{{ post.image }}" />
+<small class="bintang"><ion-icon style="color:#ffb200;" name="star"></ion-icon> {{post.rate}} / 5</small>
+        <ion-card-header>
+        <center>
+          <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
+          <ion-card-subtitle class="diskon">IDR {{ post.harga }}</ion-card-subtitle>
+  <ion-card-title class="hardis">IDR {{ post.diskon }}</ion-card-title>
+        </center>
+        </ion-card-header>
+</ion-card></a>
+    </article>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+      </div>
+</div>

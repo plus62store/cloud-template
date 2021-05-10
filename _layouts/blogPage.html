@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<style>
+.blog-page {
+    width:850px;
+    }
+.wrapper-masthead {
+    display: none;
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "author": "{{ page.author }}",
+  "contentRating": "All",
+  "image": "{{ page.img }}",
+  "name": "{{ page.title }}"
+}
+</script>
+<article class="blog-page">
+<ion-card style="width: 100%;">
+<img style="background:url('{{page.img}}');width: 100%;height: 250px;background-color: rgb(0 0 0 / 20%);background-blend-mode: overlay;background-position: center;border: none;"/>
+<ion-card-content>
+  <div class="entry">
+    {{ content }}
+  </div>
+</ion-card-content>
+</ion-card>
+</article>

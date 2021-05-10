@@ -1,0 +1,28 @@
+---
+layout: blogPost
+permalink: /blog-post
+---
+<style>
+.aside {
+    display:none!important;
+    }
+</style>
+<div class="blog-page">
+  {% for artikel in site.data.artikel %}
+    <article class="blog-post">
+<a href="{{artikel.url}}">
+        <ion-card class="posting" style="background: url('{{ site.baseurl }}{{ artikel.img }}');background-position:center;background-size:cover;background-blend-mode:overlay;background-color:#222222b8;color:white;">
+            <ion-card-header>
+              <ion-card-title color="light">{{ artikel.judul }}</ion-card-title>
+              <ion-card-label style="color:red">{{ artikel.time }}</ion-card-label>
+            </ion-card-header>
+            <ion-card-content color="light">
+              {{ artikel.deskrip }}
+            </ion-card-content>
+        </ion-card>
+</a>
+    </article>
+  {% endfor %}
+</div>
+
+

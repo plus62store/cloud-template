@@ -1,0 +1,185 @@
+
+.card {
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 3px 3px 18px -8px #263238;
+    color: #424242;
+    margin: 20px auto;
+    padding: 20px;
+  display: inline-block;
+}
+ 
+.modal-open {
+    display: inline-block;
+    border-radius: 3px;
+    background: #4caf50;
+    padding: 12px 20px;
+    color: #fff;
+    cursor: pointer;
+    width: -webkit-fill-available;
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+ .tombol-beli {
+    margin:0 8px;
+    }
+
+.modal-label {
+    position: relative;
+}
+ 
+.modal-radio {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+ 
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s, transform .25s;
+  z-index:99;
+}
+ 
+.modal2{
+  transform: scale(0.8) translate(0,-100%);
+    transition: transform .35s,opacity .35s;
+}
+ 
+.modal3{
+  transform:translate(0,100%) scale(.9);
+}
+ 
+.modal4{
+  transform:scale(0) rotate(180deg);
+}
+ 
+#modal-open:checked + .modal {
+    opacity: 1;
+    transform: scale(1);
+}
+ 
+#modal-open2:checked + .modal2{
+  transform:scale(1) translate(0,0);
+  opacity:1;
+}
+ 
+#modal-open3:checked + .modal3{
+  transform:scale(1) translate(0,0);
+  opacity:1;
+}
+ 
+#modal-open4:checked + .modal4{
+  transform:scale(1) rotate(0deg);
+  opacity:1;
+}
+ 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+}
+ 
+.modal .content {
+    position: relative;
+    width: 30%;
+    height: auto;
+    top: 10%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px -2px #222;
+    padding: 20px;
+    margin: auto;
+}
+ 
+.close-btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border: 2px solid #f44336;
+    cursor: pointer;
+}
+ 
+.close-btn:after,
+.close-btn:before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background: #f44336;
+    left: 15%;
+    top: 50%;
+    top: calc(50% - 1px);
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+}
+ 
+.close-btn:before {
+    transform: rotate(-45deg);
+}
+ 
+.action-btn{
+  display:inline-block;
+  padding: 10px 20px;
+  background:#4caf50;
+  color:#fff;
+  border-radius:15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .modal .content{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px -2px #222;
+    padding: 10px;
+    margin: auto;
+    overflow-x: auto;
+    }
+}
+
+@media only screen and (width: 768px) {
+    .modal .content{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px -2px #222;
+    padding: 10px;
+    margin: auto;
+    }
+}
+
+@media only screen and (width: 1024px) {
+    .modal .content{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px -2px #222;
+    padding: 10px;
+    margin: auto;
+    }
+}

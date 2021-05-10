@@ -1,0 +1,59 @@
+<style type="text/css">
+.wp-c .wp-copyright {
+    padding: 4px 0 0!important;
+    border: none!important;
+    position: fixed!important;
+    left: -99999999px!important;
+}
+.wp-rw .wp-logo {
+    color: #e5e5e5!important;
+    font-size: 11px!important;
+    text-transform: uppercase!important;
+    position: fixed!important;
+    left: -99999999999px!important;
+}
+.wpac .wp-btn {
+    display: inline-block!important;
+    outline: 0!important;
+    border: 0!important;
+    width: auto!important;
+    padding: 0 6px!important;
+    margin: 6px 8px!important;
+    line-height: 36px!important;
+    min-height: 36px!important;
+    background: 0 0!important;
+    white-space: nowrap!important;
+    min-width: 88px!important;
+    text-align: center!important;
+    text-transform: uppercase!important;
+    font-weight: 500!important;
+    font-size: 14px!important;
+    font-style: inherit!important;
+    font-variant: inherit!important;
+    font-family: inherit!important;
+    text-decoration: none!important;
+    cursor: pointer!important;
+    overflow: hidden!important;
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1)!important;
+    color: rgba(0,0,0,0.87)!important;
+    background: #fafafa!important;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)!important;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)!important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)!important;
+    border-radius: 5px!important;
+}
+</style>
+<div id="wpac-rating"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Rating', id: 30234});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>

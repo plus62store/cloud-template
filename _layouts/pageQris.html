@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<ion-card style="width:100%;">
+<ion-card-content>
+  <ion-card-title>{{ page.title }}</ion-card-title>
+  <div class="entry">
+    {{ content }}
+  </div>
+</ion-card-content>
+</ion-card>
+<div style="margin:0 9px">
+      <ion-card class="aside" style="background: url('{{artikel.image}}');background-position:center;background-size:cover;background-blend-mode:overlay;background-color:#ee303a;color:white;max-height: 250px;">
+        <ion-card-header>
+          <ion-card-subtitle color="light"><small>{{ page.keterangan }}</small></ion-card-subtitle>
+          <ion-chip color="light"><ion-label color="light">Kirim Bukti Bayar</ion-label></ion-chip>
+        </ion-card-header>
+        <ion-card-content>* {{ page.deskripsi }}
+        </ion-card-content>
+      </ion-card>
+</div>

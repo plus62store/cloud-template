@@ -1,0 +1,55 @@
+    <meta charset="utf-8" />
+    <!-- Primary Meta Tags -->
+    <title>{{ site.title }}</title>
+    <meta name="title" content="{{ site.title }}">
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.image }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}">
+    <meta property="twitter:title" content="{{ site.title }}">
+    <meta property="twitter:description" content="{{ site.description }}">
+    <meta property="twitter:image" content="{{ site.image }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="facebook-domain-verification" content="f13wvalc8r6vh0tkwx1wxevi1nn2om" />
+    <meta name="google-site-verification" content="anQsDctpiPVRp6NpVYsodsP7t8fDKd3t08lnPWc9euI" />
+    <meta property="fb:pages" content="{{ site.fb-pages }}" />
+
+    {% if page.excerpt %}
+    <meta property="image" content="{{ site.baseurl }}{{ page.image }}"/>
+    <meta property="og:image" content="{{ site.baseurl }}{{ page.image }}"/>
+    {% else %}
+    <meta name="description" content="{{ site.description }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    <meta property="og:description" content="{{ site.description }}" />
+    {% endif %}
+    <meta name="author" content="{{ site.author }}" />
+
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="twitter:title" content="{{ page.title }}" />
+    {% endif %}
+
+<meta content="{{ site.fb-admin }}" property="fb:admins"/>
+<meta content="{{ site.fb-appID }}" property="fb:app_id"/>
+<meta content="{{ site.fb-profile }}" property="fb:profile_id"/>
+<meta content="{{ site.fb-pages }}" property="fb:pages"/>
+<meta name="theme-color" content="#fff" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="As-Syariah Bordir" />
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/fav/ms-icon-144x144.png" />
+<meta name="msapplication-TileColor" content="#f94c2f" />
+<meta class="theme-color" content="#fff" name="apple-mobile-web-app-status-bar-style" />
+<meta class="theme-color" content="#fff" name="msapplication-navbutton-color" />
+<meta class="theme-color" content="#fff" name="theme-color" />
